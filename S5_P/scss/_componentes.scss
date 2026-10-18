@@ -1,0 +1,21 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.estado-proyecto {
+    @include m.caja-estado;
+    background-color: v.$fondo-normal;
+    border-left: 6px solid v.$color-principal;
+
+    h2 {
+        color: v.$color-titulo;
+    }
+
+    &--urgente {
+        background-color: v.$fondo-urgente;
+        border-left-color: v.$color-urgente;
+        
+        h2 {
+            color: v.$color-urgente-titulo;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+@use "variables" as v;
+
+@function espacio($cantidad) {
+    @return $cantidad * v.$espacio-base;
+}

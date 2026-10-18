@@ -1,0 +1,68 @@
+/* :root {
+    --principal: #2457a6;
+    --texto: #333333;
+    --exito: #18794e;
+}
+ 
+body { color: var(--texto); }
+.producto { color: var(--principal); padding: 20px; } LO DEJAMOS PARA APROVECHAR LA HERENCIA
+h2 { color: black; } SOBRA 
+.producto__titulo { color: var(--principal); } Que sea el quien da color
+#producto-importante h2 { color: purple; } SOBRA POR USAR ID
+.producto .producto__titulo { color: green; } SOBRA, AUMENTAMOS ESPECIFICIDAD SIN SENTIDO SI YA TENEMOS EL OTRO 
+.producto__descripcion { color: inherit; } DEJAMOS Y APROVECHAMOS LA HERENCIA
+.producto__estado { color: var(--exito); } TIENE SENTIDO MANTENERLA PORQUE ES UN ESTADO
+.producto__accion { color: inherit; }
+.producto__accion:hover { color: red; } LO MANTENEMOS PORQUE TIENE SENTIDO
+.producto__accion { color: blue !important; } NO SIRVE DE NADA, LO QUE HACE ES ANULARNOS EL COLOR 
+*/ 
+
+/* CSS Modificado */
+:root {
+    --principal: #2457a6;
+    --texto: #333333;
+    --exito: #18794e;
+    --alerta: #b03a2b;
+}
+
+body {
+    color: var(--texto);
+}
+
+.producto {
+    color: var(--principal);
+    padding: 20px;
+}
+
+.producto__titulo {
+    color: var(--principal);
+}
+
+.producto__estado {
+    color: var(--exito);
+}
+
+.producto__accion {
+    color: inherit;
+}
+
+.producto__accion:hover {
+    color: red;
+}
+
+/* Lo agregamos porque el documento nos pide un focus visible y parecido a lo que veniamos haciendo anteriormente ponemos el recuadro en azul */
+.producto__accion:focus-visible {
+    outline: 2px solid var(--principal);
+    outline-offset: 2px;
+}
+
+/* estados */
+/* Modificador Alerta */
+.producto--alerta {
+    background-color: var(--alerta, #d93025);
+}
+
+/* Modificador Éxito */
+.producto--exito {
+    background-color: var(--exito, #18794e);
+}

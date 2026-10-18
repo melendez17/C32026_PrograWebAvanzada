@@ -1,0 +1,74 @@
+:root {
+    --color-principal: #00479b;
+    /* cambio temporal PASO 12 */
+    --color-principal: #6a1b9a;
+    --color-alerta: #b03a2b;
+    --espacio: 1rem;
+}
+
+body {
+    color: #333333;
+    font-family: Arial, sans-serif;
+}
+/* lo moví */
+h3 { color: green; }
+
+
+.titulo { color: blue; }
+.tarjeta h3 { color: orange; }
+/* .tarjeta p { color: gray; }
+.resumen { color: purple; } */
+
+/* reglas adicionales PASO 7 */
+/* .tarjeta p { color: red;} */
+/* p.resumen { color: blue; } */
+
+.estado { color: var(--color-alerta); }
+.autor:hover { text-decoration: none; }
+
+/* lo moví */
+#destacada h3 { color: red; }
+
+/* lo movi */
+.tarjeta {
+    color: var(--color-principal);
+    padding: var(--espacio);
+    border: 2px solid #cccccc;
+}
+
+/* tarjeta temporal PASO 8 */
+/* .tarjeta {
+    color: blue;
+    font-family: Georgia, serif;
+} */
+
+/* tarjeta temporal PASO 9 */
+/* .tarjeta {
+    color: darkgreen;
+} */
+
+/* paso 10 */
+/* .tarjeta a {
+    color: inherit;
+} */
+
+/* paso 11 */
+.autor {
+    color: #00479b;
+    text-decoration: none;
+}
+ 
+.autor:hover {
+    text-decoration: underline;
+}
+ 
+.autor:focus-visible {
+    outline: 2px solid #00479b;
+    outline-offset: 2px;
+}
+
+/* PASO 13 */
+:root { --acento: blue; }
+.panel { --acento: green; }
+.boton { color: var(--acento); }
+

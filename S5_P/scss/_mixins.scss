@@ -1,0 +1,10 @@
+@use "variables" as v;
+@use "funciones" as f;
+
+// mixin
+
+@mixin caja-estado{
+    border-radius: v.$radio;
+    
+    padding: f.espacio(3);
+}
